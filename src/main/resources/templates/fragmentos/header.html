@@ -37,6 +37,9 @@
 				<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" name="q">
 				<button class="btn btn-success  my-2 my-sm-0" type="submit">Buscar</button>
 			</form>
+			<form th:action="@{/logout}" method="post">
+				<input class="btn btn-danger" type="submit" value="cerrar sesion"/>
+			</form>
 		  </div>
 		</nav>
 	</div>

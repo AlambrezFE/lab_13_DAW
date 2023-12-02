@@ -49,7 +49,7 @@ public class TareaServicio implements ITareaServicio{
     for (Tarea tarea : tareas) {
         if (tarea.getDescripcion().contains(descripcion)) {
             tareasConDescripcion.add(tarea);
-        }
+        }	
     }
     return tareasConDescripcion;
     }

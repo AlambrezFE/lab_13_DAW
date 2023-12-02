@@ -31,6 +31,11 @@ public class controlador {
     @Autowired
     private ITareaServicio servicio1; 
 
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
     @GetMapping("/listarEmpleados")
     public String listarEmpleados (Model model) {
         List<Empleado> empleados= servicio.listar();
@@ -65,8 +70,6 @@ public class controlador {
         servicio.borrar(id);
         return "redirect:/listarEmpleados";
     }
-
-
 
 
     @GetMapping("/listarTareas")
@@ -120,6 +123,7 @@ public class controlador {
         model.addAttribute("tareas", tareasEncontradas);
         return "BuscarTarea"; 
     }
+
     return "error";
 }
 
